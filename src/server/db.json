@@ -1,0 +1,58 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Ann huke",
+      "email": "annhuke@gmail.com",
+      "phone": "9876543211",
+      "phoneurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuWgg1mjdrrer5asSh0TiJKDkdg40UEHc3uw&usqp=CAU",
+      "company": "ABCD Company",
+      "title": "hr",
+      "GroupID": "1"
+    },
+    {
+      "id": 3,
+      "name": "Amal",
+      "email": "amal@gmail.com",
+      "phone": "9976543210",
+      "phoneurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFwS75r0Z6IQQVp4ggM7pKia0p5QS-LupGxKTHu74kcVj1ZSJKJRwnDAJSV4EzaHkfcmc&usqp=CAU",
+      "company": "BCD Company",
+      "title": "Junior Developer",
+      "GroupID": "1"
+    },
+    {
+      "id": 4,
+      "name": "Anjual",
+      "email": "anjual@gmail.com",
+      "phone": "77776543210",
+      "phoneurl": "https://cdn-icons-png.flaticon.com/512/320/320333.png",
+      "company": "AAA Company",
+      "title": "Junior Developer",
+      "GroupID": "2"
+    },
+    {
+      "GroupID": "2",
+      "phoneurl": "https://cdn-icons-png.flaticon.com/512/219/219969.png",
+      "name": "Megha N J",
+      "email": "megha@gmail.com",
+      "phone": "9605470949",
+      "company": "abcd",
+      "title": "Software Developer",
+      "id": 5
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "Company"
+    },
+    {
+      "id": "2",
+      "name": "Family"
+    },
+    {
+      "id": "3",
+      "name": "Friends"
+    }
+  ]
+}

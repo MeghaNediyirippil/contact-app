@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Instrument+Serif:ital@0;1&family=Kaisei+HarunoUmi:wght@700&family=Kaushan+Script&family=Kenia&family=Licorice&family=Merriweather:ital,wght@1,300&family=Mr+Dafoe&family=Mulish:wght@700&family=Open+Sans:wght@400;500;600&family=Pacifico&family=Permanent+Marker&family=Plaster&family=Playfair+Display&family=Pompiere&family=Poppins:ital,wght@1,100&family=Rubik+Wet+Paint&family=Sigmar&family=Sirin+Stencil&display=swap');
+
+h1{
+    font-family: 'Caprasimo', cursive;
+}
+h3{
+    font-family: 'Kenia', cursive;
+}
+p{
+    font-family: 'Merriweather', serif;
+}

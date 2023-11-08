@@ -1,0 +1,107 @@
+Login Date : {{loginDate|date:'short'}}
+<!-- with out using any datatype od current date -->
+<!-- Login Date : {{loginDate}}  -->
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="my-3">CONTACT MANAGEMENT APPLICATION</h1>
+            <p style="text-align: justify;">Contact management is the process of storing and tracking data on customers
+                and leads. In addition to providing quick access to customer data, investing in contact management can
+                help you grow and diversify your customer base.As content marketers, getting to the “why” of our content
+                is central. We are so trained to think in the classic “features and benefits” form of creating, that it
+                can be hard to step back and tell the larger story. And, of course, that’s what we want to achieve with
+                content marketing .. It should ultimately answer the question of “why” our consumers care about us.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col d-flex justify-content-between ">
+            <!-- search -->
+            <div>
+                <!-- <input (change)="nameChange()" type="text" placeholder="Srearch Contact" class="form-control"> -->
+                <input (keyup)="search($event)" type="text" placeholder="Srearch Contact" class="form-control">
+
+            </div>
+            <!-- add contact button -->
+            <button class="btn btn-outline-dark mb-5" routerLink="/contactManager/addContact">Add Contact</button>
+        </div>
+    </div>
+
+    <!-- string interpolation -->
+    {{heading}}
+    <!-- {{allContacts|json}} -->
+
+
+    <div class="row my-3">
+        <div class="col-6" *ngFor="let contact of allContacts |filter:searchKey:'name'">
+            <div class="card">
+                <div class="row">
+                    <div class="col-6">
+                        <!-- image -->
+                        <img width="300px" height="300px"
+                        [src]="contact.phoneurl" alt="">
+    
+                    </div>
+                    <div class="col-6">
+                        <!-- content -->
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                              <div class="ms-2 me-auto">
+                                <div class="fw-bold">Full Name</div>
+                                {{contact.name}}
+                              </div>
+                             
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                              <div class="ms-2 me-auto">
+                                <div class="fw-bold">Phone Number</div>
+                                {{contact.phone}}
+                              </div>
+                             
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                              <div class="ms-2 me-auto">
+                                <div class="fw-bold">Email</div>
+                                {{contact.email}}
+                              </div>
+                             
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start" >
+                                <div class="ms-2 me-auto">
+                                  <div class="fw-bold">
+                                    <!-- view -->
+                                    
+                                        <span class="badge bg-dark rounded-pill m-3">
+                                            <a routerLink="/contactManager/view/{{contact.id}}">
+                                            <i class="fa-solid fa-eye fa-fade text-light"></i>
+                                        </a>
+                                        </span>
+                                   
+                                    
+                                    <!-- edit -->
+                                    
+                                        <span class="badge bg-dark rounded-pill m-3">
+                                            <a routerLink="/contactManager/edit/{{contact.id}}">
+                                            <i class="fa-solid fa-pen fa-fade text-light"></i>
+                                        </a>
+                                          </span>
+                                   
+                                    
+                                   <!-- delete -->
+                                   <button  (click)="deleteContact(contact.id)"  class="badge bg-dark rounded-pill m-3">
+                                   
+                                        <a routerLink="">
+                                        <i class="fa-sharp fa-solid fa-trash fa-fade text-light"></i>
+                                    </a>
+                                    </button>
+                                  </div>
+                                </div>
+                              </li>
+                          </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</div>

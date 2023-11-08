@@ -1,0 +1,65 @@
+<!-- string interpolation -->
+<!-- {{contact|json}} -->
+
+<div class="container">
+    <div class="row">
+        <h1 class="text-center my-3">Update Contact Details</h1>
+        
+        <div class="col-6">
+            <!-- form -->
+            <!-- full name -->
+            <form action="">
+            <div class="form-floating my-3">
+                <input [(ngModel)]="contact.name" name="name" type="text" class="form-control" id="floatingInput1" placeholder="Full Name">
+                <label for="floatingInput1">Full Name</label>
+              </div>
+              <!-- Photo -->
+              <div class="form-floating mb-3">
+                <input [(ngModel)]="contact.phoneurl" name="conctactname" type="text" class="form-control" id="floatingphoto" placeholder="Photo Url">
+                <label for="floatingphoto">Photo Url</label>
+              </div>
+              <!-- Email -->
+              <div class="form-floating mb-3">
+                <input [(ngModel)]="contact.email" name="email" type="email" class="form-control" id="floatingemail" placeholder="name@example.com">
+                <label for="floatingemail">name@example.com</label>
+              </div>
+              <!-- Mobile -->
+              <div class="form-floating mb-3">
+                <input [(ngModel)]="contact.phone" name="phone" type="text" class="form-control" id="floatingMobile" placeholder="Mobile">
+                <label for="floatingMobile">Mobile</label>
+              </div>
+              <!-- company name -->
+              <div class="form-floating mb-3">
+                <input [(ngModel)]="contact.company" name="company" type="text" class="form-control" id="floatingcompany" placeholder="company name">
+                <label for="floatingcompany">Company Name</label>
+              </div>
+              <!-- title -->
+              <div class="form-floating mb-3">
+                <input [(ngModel)]="contact.title" name="title" type="text" class="form-control" id="floatingTitle" placeholder="title">
+                <label for="floatingTitle">Title</label>
+              </div>
+              <!-- Group -->
+              <div class="mb-3 form-floating">
+                <select [(ngModel)]="contact.GroupID" name="groupid" class="form-control">
+                    <option value="" selected hidden disabled>Select</option>
+                    <option [value]="grp.id" *ngFor="let grp of groups">{{grp.name}}</option>
+                    
+                </select>
+                <!-- Button -->
+                <div class="text-center">
+                    <input (click)="updateConctact()" type="button"  value="Update" class="btn btn-outline-dark my-3">
+                </div>
+
+              </div>
+            </form>
+
+              
+        </div>
+        <div class="col-6">
+            <!-- image -->
+            <img width="400px" height="500px" [src]="contact.phoneurl" alt="">
+            <!-- propertty binding-    [src]="contact.phoneurl" -->
+        </div>
+    </div>
+</div>
+
